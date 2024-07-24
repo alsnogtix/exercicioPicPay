@@ -6,8 +6,8 @@ import lombok.*;
 
 import java.math.BigDecimal;
 
-@Entity(name="usuarios")
-@Table(name="usuarios")
+@Entity(name="users")
+@Table(name="users")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -18,19 +18,19 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String nome;
-    private String sobrenome;
+    private String firstName;
+    private String lastName;
 
     @Column(unique = true)
-    private String cpf;
+    private String document;
 
     @Column(unique = true)
     private String email;
 
-    private String senha;
+    private String password;
 
-    private BigDecimal saldo;
+    private BigDecimal balance;
 
     @Enumerated(EnumType.STRING)
-    private UserType tipoUsuario;
+    private UserType UserType;
 }
