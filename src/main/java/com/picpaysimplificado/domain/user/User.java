@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of="id")
-public class Usuario {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -32,5 +32,5 @@ public class Usuario {
     private BigDecimal saldo;
 
     @Enumerated(EnumType.STRING)
-    private TipoUsuario tipoUsuario;
+    private UserType tipoUsuario;
 }

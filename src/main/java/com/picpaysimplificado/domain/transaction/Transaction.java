@@ -1,6 +1,6 @@
-package com.picpaysimplificado.domain.transacao;
+package com.picpaysimplificado.domain.transaction;
 
-import com.picpaysimplificado.domain.user.Usuario;
+import com.picpaysimplificado.domain.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of="id")
-public class Transacao {
+public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,11 +23,11 @@ public class Transacao {
 
     @ManyToOne
     @JoinColumn(name = "pagador_id")
-    private Usuario pagador;
+    private User pagador;
 
     @ManyToOne
     @JoinColumn(name = "recebedor_id")
-    private Usuario recebedor;
+    private User recebedor;
 
     private LocalDateTime dataTransacao;
 }

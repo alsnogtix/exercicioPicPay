@@ -1,6 +1,6 @@
 package com.picpaysimplificado.domain.user;
 
-public enum TipoUsuario {
+public enum UserType {
     COMUM,
     VENDEDOR
 }
